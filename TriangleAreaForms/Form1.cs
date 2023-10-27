@@ -16,5 +16,27 @@ namespace TriangleAreaForms
         {
             InitializeComponent();
         }
+
+        private void btnBase_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double baset = double.Parse(txtBase.Text);
+                double heightt = double.Parse(txtHeight.Text);
+
+                double result = (baset * heightt) / 2;
+
+
+                txbResult.Text = result.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Dados inválidos informados");
+                txbResult.Clear();
+                txtBase.Clear();
+                txtHeight.Clear();
+            }
+            
+        }
     }
 }
